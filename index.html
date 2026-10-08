@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop women's and men's sandals online. Comfortable, stylish sandals with fast delivery and easy returns.">
+  <title>Sandal Studio | Women's &amp; Men's Sandals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="demo-bar">Demo store. Payments are simulated and no money is charged.</div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" data-config="brand">Sandal Studio</a>
+
+      <nav class="nav" id="nav">
+        <a href="#shop" data-filter="women">Women</a>
+        <a href="#shop" data-filter="men">Men</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="bag-btn" id="bagBtn" aria-label="Open your bag">
+          <span>Bag</span>
+          <span class="bag-count" id="bagCount">0</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">New season collection</p>
+          <h1>Comfort that carries you. Style that stands out.</h1>
+          <p class="lead">Handpicked sandals for women and men. Made for comfort, built to last, and delivered across Ghana.</p>
+          <div class="hero-actions">
+            <a href="#shop" class="btn btn-dark" data-filter="women">Shop Women's</a>
+            <a href="#shop" class="btn btn-outline" data-filter="men">Shop Men's</a>
+          </div>
+        </div>
+        <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ===== Trust bar ===== -->
+    <section class="trust">
+      <div class="container trust-inner">
+        <div><strong>Free delivery</strong><span>on orders over GH₵ 300</span></div>
+        <div><strong>7-day returns</strong><span>easy, no stress</span></div>
+        <div><strong>Secure checkout</strong><span>Mobile Money, card or cash</span></div>
+        <div><strong>WhatsApp support</strong><span>we reply fast</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Categories ===== -->
+    <section class="categories">
+      <div class="container cat-grid">
+        <a href="#shop" class="cat-tile" data-filter="women">
+          <div class="cat-art" id="tileWomen" aria-hidden="true"></div>
+          <div class="cat-label">
+            <h2>Women's Sandals</h2>
+            <span>Shop now &rarr;</span>
+          </div>
+        </a>
+        <a href="#shop" class="cat-tile" data-filter="men">
+          <div class="cat-art" id="tileMen" aria-hidden="true"></div>
+          <div class="cat-label">
+            <h2>Men's Sandals</h2>
+            <span>Shop now &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Shop ===== -->
+    <section class="shop" id="shop">
+      <div class="container">
+        <div class="shop-head">
+          <div>
+            <p class="eyebrow">Our collection</p>
+            <h2 id="shopTitle">All Sandals</h2>
+          </div>
+          <div class="shop-controls">
+            <div class="tabs" role="tablist">
+              <button class="tab active" data-filter="all">All</button>
+              <button class="tab" data-filter="women">Women's</button>
+              <button class="tab" data-filter="men">Men's</button>
+            </div>
+            <label class="sort">
+              <span>Sort by</span>
+              <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="name">Name A to Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <p class="empty-msg" id="emptyMsg" hidden>No sandals in this category yet. Check back soon.</p>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Why Sandal Studio</p>
+          <h2>Sandals made to be worn every day</h2>
+          <p class="sub">We choose every pair for its comfort, fit and finish, so you can walk all day without worrying about your feet.</p>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-num">01</div>
+            <h3>Quality materials</h3>
+            <p>Genuine leather, soft synthetic straps and cushioned soles chosen for durability.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-num">02</div>
+            <h3>Comfort-first design</h3>
+            <p>Supportive footbeds and non-slip soles, tested for long days on your feet.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-num">03</div>
+            <h3>Fast, reliable delivery</h3>
+            <p>Careful packaging and quick delivery in Accra and across other regions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="reviews">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Customer love</p>
+          <h2>What our customers say</h2>
+          <p class="sub muted-note">Sample reviews for this demo.</p>
+        </div>
+        <div class="review-grid">
+          <blockquote class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“The wedge sandals are beautiful and so comfortable. I wore them to a wedding and walked all evening with no pain.”</p>
+            <cite>Ama K., Kumasi</cite>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“Ordered the classic leather sandal for my husband. Great quality, the fit was perfect and delivery was quick.”</p>
+            <cite>Kwame A., Accra</cite>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★☆</div>
+            <p>“Ordering on WhatsApp was simple and the team answered all my questions. The slides are very light and easy to wear.”</p>
+            <cite>Efua T., Takoradi</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+      <div class="container narrow">
+        <div class="section-head center">
+          <p class="eyebrow">Help</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <details>
+          <summary>How do I choose my size?</summary>
+          <p>Women's sandals come in sizes 36 to 41 and men's sandals in sizes 39 to 45 (EU sizing). If you are between two sizes, we recommend the larger one.</p>
+        </details>
+        <details>
+          <summary>How long does delivery take?</summary>
+          <p>Accra usually takes 1 to 2 working days. Other regions usually take 2 to 5 working days. Free delivery is available on orders over GH₵ 300.</p>
+        </details>
+        <details>
+          <summary>Can I return or exchange my sandals?</summary>
+          <p>Yes. You can return or exchange unworn sandals in their original packaging within 7 days of delivery.</p>
+        </details>
+        <details>
+          <summary>Which payment methods do you accept?</summary>
+          <p>We accept Mobile Money, card payments and pay on delivery in Accra. In this demo, no real payment is taken.</p>
+        </details>
+        <details>
+          <summary>How will I know my order is confirmed?</summary>
+          <p>After you place your order, we send you the details on WhatsApp. Our team will confirm your order and delivery time.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2>We are here to help</h2>
+          <p class="sub">Questions about sizes, orders or delivery? Reach us any time during opening hours.</p>
+          <ul class="contact-list">
+            <li><strong>Address</strong><span data-config="address"></span></li>
+            <li><strong>Phone</strong><span data-config="phoneDisplay"></span></li>
+            <li><strong>Email</strong><a href="mailto:" data-config-href="email" data-config="email"></a></li>
+            <li><strong>Opening hours</strong><span data-config="hours"></span></li>
+          </ul>
+          <a class="btn btn-whatsapp" id="contactWa" target="_blank" rel="noopener">Chat with us on WhatsApp</a>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label>Your name
+            <input type="text" required placeholder="Full name">
+          </label>
+          <label>Email or phone
+            <input type="text" required placeholder="How can we reach you?">
+          </label>
+          <label>Message
+            <textarea rows="5" required placeholder="Tell us how we can help"></textarea>
+          </label>
+          <button type="submit" class="btn btn-dark btn-block">Send message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="logo" data-config="brand">Sandal Studio</div>
+        <p class="footer-text">Women's and men's sandals for comfort, style and everyday wear.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="#shop" data-filter="women">Women's sandals</a>
+        <a href="#shop" data-filter="men">Men's sandals</a>
+        <a href="#shop" data-filter="all">All sandals</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="#faq">FAQ</a>
+        <a href="#faq">Delivery</a>
+        <a href="#faq">Returns</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a id="footerWa" target="_blank" rel="noopener">WhatsApp</a>
+        <span data-config="phoneDisplay"></span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; <span id="year"></span> <span data-config="brand"></span>. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- ===== Overlay ===== -->
+  <div class="overlay" id="overlay" data-close></div>
+
+  <!-- ===== Product modal ===== -->
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="backdrop" data-close></div>
+    <div class="dialog product-dialog">
+      <button class="close-x" data-close aria-label="Close">&times;</button>
+      <div class="product-layout">
+        <div class="product-media" id="modalMedia"></div>
+        <div class="product-info">
+          <p class="meta" id="modalMeta"></p>
+          <h2 id="modalName"></h2>
+          <p class="modal-price" id="modalPrice"></p>
+          <p class="modal-desc" id="modalDesc"></p>
+
+          <div class="option-label">
+            <span>Size (EU)</span>
+            <span class="size-help" id="sizeHelp"></span>
+          </div>
+          <div class="size-options" id="sizeOptions"></div>
+
+          <div class="option-label"><span>Quantity</span></div>
+          <div class="qty">
+            <button id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+            <span id="qtyValue">1</span>
+            <button id="qtyPlus" aria-label="Increase quantity">+</button>
+          </div>
+
+          <button class="btn btn-dark btn-block btn-lg" id="addToBagBtn">Add to bag</button>
+          <p class="fine-print">Free delivery on orders over GH₵ 300. 7-day returns.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Bag drawer ===== -->
+  <aside class="drawer" id="bagDrawer" aria-label="Your bag">
+    <div class="drawer-head">
+      <h2>Your bag</h2>
+      <button class="close-x static" data-close aria-label="Close bag">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <p class="empty-bag" id="bagEmpty">Your bag is empty. Find your perfect pair in the shop.</p>
+      <div id="bagItems"></div>
+    </div>
+    <div class="drawer-foot" id="bagFooter" hidden>
+      <p class="free-note" id="freeNote"></p>
+      <div class="sum-row"><span>Subtotal</span><span id="bagSubtotal"></span></div>
+      <div class="sum-row"><span>Delivery</span><span id="bagDelivery"></span></div>
+      <div class="sum-row total"><span>Total</span><span id="bagTotal"></span></div>
+      <button class="btn btn-dark btn-block btn-lg" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ===== Checkout modal ===== -->
+  <div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="backdrop" data-close></div>
+    <div class="dialog checkout-dialog">
+      <button class="close-x" data-close aria-label="Close">&times;</button>
+      <h2 id="checkoutTitle">Checkout</h2>
+
+      <div class="checkout-summary">
+        <ul id="checkoutLines"></ul>
+        <div class="sum-row"><span>Subtotal</span><span id="sumSubtotal"></span></div>
+        <div class="sum-row"><span>Delivery</span><span id="sumDelivery"></span></div>
+        <div class="sum-row total"><span>Total</span><span id="sumTotal"></span></div>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <div class="form-grid">
+          <label>Full name *
+            <input type="text" id="custName" required autocomplete="name" placeholder="e.g. Ama Mensah">
+          </label>
+          <label>Phone number *
+            <input type="tel" id="custPhone" required autocomplete="tel" placeholder="e.g. 0241234567">
+          </label>
+          <label>Email (optional)
+            <input type="email" id="custEmail" autocomplete="email" placeholder="you@example.com">
+          </label>
+          <label>City *
+            <select id="custCity" required>
+              <option value="Accra">Accra</option>
+              <option value="Kumasi">Kumasi</option>
+              <option value="Takoradi">Takoradi</option>
+              <option value="Tamale">Tamale</option>
+              <option value="Cape Coast">Cape Coast</option>
+              <option value="Other">Other region</option>
+            </select>
+          </label>
+        </div>
+        <label>Delivery address *
+          <input type="text" id="custAddress" required autocomplete="street-address" placeholder="Area, street and nearest landmark">
+        </label>
+        <label>Order note (optional)
+          <textarea id="custNote" rows="2" placeholder="e.g. Call before delivery"></textarea>
+        </label>
+
+        <fieldset class="payment">
+          <legend>Payment method</legend>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="momo" checked>
+            <span><strong>Mobile Money</strong><small>MTN, Telecel or AirtelTigo (demo)</small></span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="card">
+            <span><strong>Card</strong><small>Visa or Mastercard (demo)</small></span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="cod">
+            <span><strong>Pay on delivery</strong><small>Cash when your order arrives (Accra)</small></span>
+          </label>
+        </fieldset>
+
+        <button type="submit" class="btn btn-dark btn-block btn-lg">Place order</button>
+        <p class="fine-print center">By placing your order you agree to our delivery and return terms.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Confirmation modal ===== -->
+  <div class="modal" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="backdrop" data-close></div>
+    <div class="dialog confirm-dialog center">
+      <div class="tick" aria-hidden="true">&#10003;</div>
+      <h2 id="confirmTitle">Order received!</h2>
+      <p>Your order number is <strong id="orderNo"></strong></p>
+      <p class="order-total-line">Total: <strong id="orderTotalText"></strong></p>
+      <p class="payment-note" id="paymentNote"></p>
+      <a class="btn btn-whatsapp btn-block btn-lg" id="waOrderBtn" target="_blank" rel="noopener">Send order on WhatsApp</a>
+      <button class="btn btn-outline btn-block" data-close>Continue shopping</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
